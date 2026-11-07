@@ -16,7 +16,7 @@ Aplicación web oficial tipo "Link-in-Bio / Linktree" de alto impacto visual par
   * Modal interactivo para compartir y escanear QR.
 * **Branding de Lujo:**
   * Tipografías oficiales: `Quicksand` (display) y `Nunito` (body).
-  * Paleta de colores boutique: Marfil cálido (`#FAF8F5`), Oro Champaña (`#D4AF37`) y Obsidiana (`#171717`).
+  * Paleta de colores boutique: Amarillo Pastel (`#FEF9C3`), Oro Champaña (`#D4AF37`) y Obsidiana (`#171717`).
   * Logo oficial integrado en avatar, watermark animado y generador QR.
 
 ---
@@ -25,7 +25,7 @@ Aplicación web oficial tipo "Link-in-Bio / Linktree" de alto impacto visual par
 
 1. **Sitio Web Oficial / Catálogo Principal (CTA Destacado):** [https://encargosmiangel.lat/](https://encargosmiangel.lat/)
 2. **Asesoría / Pedidos por WhatsApp Directo:** [https://wa.me/message/PEBR4FUBT2LNI1](https://wa.me/message/PEBR4FUBT2LNI1)
-3. **Canal Oficial de WhatsApp:** [https://whatsapp.com/channel/0029Vb7JDjw59PwM2ACDrJ2k](https://whatsapp.com/channel/0029Vb7JDjw59PwM2ACDrJ2k)
+3. **Canal de WhatsApp (Promociones y Descuentos Exclusivos):** [https://whatsapp.com/channel/0029Vb7JDjw59PwM2ACDrJ2k](https://whatsapp.com/channel/0029Vb7JDjw59PwM2ACDrJ2k)
 4. **Instagram Oficial (`@encargos_miangelpreferido_`):** [https://www.instagram.com/encargos_miangelpreferido_](https://www.instagram.com/encargos_miangelpreferido_?mdxt=MWZpZjN4c2I4a3JicA==)
 5. **TikTok Oficial (`@encargos_miangel_`):** [https://www.tiktok.com/@encargos_miangel_](https://www.tiktok.com/@encargos_miangel_?_r=1&_t=ZS-9BBy3bXWr0H)
 

@@ -32,9 +32,9 @@ export default function BackgroundWatermark() {
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden select-none z-0">
       {/* Base warm boutique radial ambient glow orbs */}
-      <div className="absolute -top-36 -left-36 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-gold-200/35 via-boutique-200/20 to-transparent opacity-80 blur-3xl" />
-      <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-gold-300/20 via-boutique-100/30 to-transparent opacity-70 blur-3xl" />
-      <div className="absolute -bottom-40 left-1/3 w-[550px] h-[550px] rounded-full bg-gradient-to-t from-boutique-200/30 via-gold-100/20 to-transparent opacity-60 blur-3xl" />
+      <div className="absolute -top-36 -left-36 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-yellow-300/25 via-boutique-100/30 to-transparent opacity-70 blur-3xl" />
+      <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-yellow-200/30 via-boutique-100/20 to-transparent opacity-60 blur-3xl" />
+      <div className="absolute -bottom-40 left-1/3 w-[550px] h-[550px] rounded-full bg-gradient-to-t from-boutique-100/30 via-yellow-200/20 to-transparent opacity-60 blur-3xl" />
 
       {/* Rotating Subtle Celestial Rings for Luxury Aesthetics */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -57,11 +57,11 @@ export default function BackgroundWatermark() {
           />
           <path
             d="M30 85C45 75 60 55 90 25C75 50 55 70 30 85Z"
-            fill="#D4AF37"
+            fill="#F59E0B"
           />
           <path
             d="M10 75C25 65 40 45 70 15C55 40 35 60 10 75Z"
-            fill="#AF8E60"
+            fill="#D97706"
           />
         </svg>
       </div>
@@ -80,7 +80,7 @@ export default function BackgroundWatermark() {
           />
           <path
             d="M30 85C45 75 60 55 90 25C75 50 55 70 30 85Z"
-            fill="#D4AF37"
+            fill="#F59E0B"
           />
         </svg>
       </div>
@@ -90,7 +90,7 @@ export default function BackgroundWatermark() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{
-            opacity: [0.06, 0.11, 0.06],
+            opacity: [0.03, 0.07, 0.03],
             scale: [0.97, 1.03, 0.97],
             rotate: [0, 1.2, -1.2, 0],
           }}
@@ -99,7 +99,7 @@ export default function BackgroundWatermark() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="relative w-[320px] h-[320px] sm:w-[480px] sm:h-[480px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-full overflow-hidden select-none filter blur-[2px] sm:blur-[3px]"
+          className="relative w-[320px] h-[320px] sm:w-[480px] sm:h-[480px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] rounded-full overflow-hidden select-none filter blur-[2px] sm:blur-[3px] mix-blend-multiply pointer-events-none"
         >
           <Image
             src="/logo.jpg"
@@ -124,12 +124,12 @@ export default function BackgroundWatermark() {
             height: `${p.size}px`,
             backgroundColor:
               p.id % 3 === 0
-                ? "rgba(212, 175, 55, 0.6)"
+                ? "rgba(245, 158, 11, 0.6)"
                 : p.id % 3 === 1
                 ? "rgba(255, 255, 255, 0.85)"
-                : "rgba(175, 142, 96, 0.35)",
+                : "rgba(251, 191, 36, 0.45)",
             boxShadow:
-              p.id % 2 === 0 ? "0 0 10px rgba(212, 175, 55, 0.7)" : "none",
+              p.id % 2 === 0 ? "0 0 10px rgba(245, 158, 11, 0.7)" : "none",
           }}
           animate={{
             y: [0, -32, 0],

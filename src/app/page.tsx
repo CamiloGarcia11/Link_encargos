@@ -32,9 +32,9 @@ const LINKS_DATA: LinkItem[] = [
   {
     id: "canal-whatsapp",
     title: "Canal de WhatsApp",
-    subtitle: "Novedades, fotos reales y ofertas",
+    subtitle: "Promociones y descuentos exclusivos",
     url: "https://whatsapp.com/channel/0029Vb7JDjw59PwM2ACDrJ2k",
-    badge: "VIP ✨",
+    badge: "PROMOS ✨",
     highlight: false,
     iconType: "channel",
   },

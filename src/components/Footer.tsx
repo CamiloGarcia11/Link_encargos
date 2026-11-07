@@ -53,7 +53,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           onClick={handleLinkClick}
           className="p-2.5 rounded-full bg-white border border-surface-dark text-surface-dark shadow-[0_2px_0_#171717] hover:bg-gold-100 transition-transform hover:scale-110"
-          aria-label="Canal Oficial WhatsApp"
+          aria-label="Canal de Promociones y Descuentos WhatsApp"
         >
           <Sparkles className="w-4 h-4 text-gold-600" />
         </a>

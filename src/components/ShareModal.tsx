@@ -143,7 +143,7 @@ export default function ShareModal({ isOpen, onClose }: ShareModalProps) {
             <div className="flex flex-col gap-2.5">
               <button
                 onClick={handleCopy}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-surface-dark text-white font-display text-xs uppercase font-bold tracking-wider border-2 border-surface-dark shadow-[0_3px_0_#947449] active:translate-y-0.5 active:shadow-none transition-all hover:bg-neutral-800"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-surface-dark text-white font-display text-xs uppercase font-bold tracking-wider border-2 border-surface-dark shadow-[0_3px_0_#171717] active:translate-y-0.5 active:shadow-none transition-all hover:bg-neutral-800"
               >
                 {copied ? (
                   <>
