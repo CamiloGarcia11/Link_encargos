@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-quicksand: 'Quicksand', sans-serif;
+  --font-nunito-sans: 'Nunito', sans-serif;
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --background: #FAF8F5;
+  --foreground: #171717;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FAF8F5;
+}
+
+body {
+  color: #171717;
+  background-color: #FAF8F5;
+  font-family: var(--font-nunito-sans), var(--font-quicksand), sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-quicksand), sans-serif;
+}
+
+/* ========================================================================= */
+/* LUXURY LETTER-BY-LETTER PROGRESSIVE WAVE REFLECTION                       */
+/* ========================================================================= */
+@keyframes letterWave {
+  0% {
+    color: #171717;
+    text-shadow: none;
+    transform: translateY(0);
+  }
+  10% {
+    color: #D4AF37;
+    text-shadow: 0 0 14px rgba(212, 175, 55, 0.6), 0 0 22px rgba(255, 245, 214, 0.4);
+    transform: translateY(-2px);
+  }
+  20% {
+    color: #171717;
+    text-shadow: none;
+    transform: translateY(0);
+  }
+  100% {
+    color: #171717;
+    text-shadow: none;
+    transform: translateY(0);
+  }
+}
+
+@keyframes letterWaveGold {
+  0% {
+    color: #947449;
+    text-shadow: none;
+    transform: translateY(0);
+  }
+  10% {
+    color: #FFF9E6;
+    text-shadow: 0 0 16px rgba(212, 175, 55, 0.9), 0 0 26px rgba(255, 249, 230, 0.7);
+    transform: translateY(-2.5px);
+  }
+  20% {
+    color: #947449;
+    text-shadow: none;
+    transform: translateY(0);
+  }
+  100% {
+    color: #947449;
+    text-shadow: none;
+    transform: translateY(0);
+  }
+}
+
+.letter-wave {
+  display: inline-block;
+  color: #171717;
+  animation: letterWave 5.5s ease-in-out infinite;
+  will-change: transform, color, text-shadow;
+}
+
+.letter-wave-gold {
+  display: inline-block;
+  color: #947449;
+  animation: letterWaveGold 5.5s ease-in-out infinite;
+  will-change: transform, color, text-shadow;
+}
+
+/* Shimmer animation effects */
+@keyframes shimmerSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-gold-badge {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.15) 0%,
+    rgba(212, 175, 55, 0.85) 50%,
+    rgba(212, 175, 55, 0.15) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmerSweep 3s infinite linear;
+}
+
+.shimmer-cta-glow {
+  background: linear-gradient(
+    90deg,
+    #171717 0%,
+    #D4AF37 40%,
+    #FAF5EC 50%,
+    #D4AF37 60%,
+    #171717 100%
+  );
+  background-size: 250% 100%;
+  animation: shimmerSweep 4.5s infinite linear;
+}
+
+/* Glassmorphism styling */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 2px solid #171717;
+  box-shadow: 0 6px 0 #171717, 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Boutique Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #DCCDB2;
+  border-radius: 9999px;
+  border: 1.5px solid #171717;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
