@@ -4,14 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import confetti from "canvas-confetti";
 import { playTapSound, playCelebrationSound } from "@/lib/sound";
-import {
-  Globe,
-  Radio,
-  ChevronRight,
-  Flame,
-  Sparkles,
-  ExternalLink,
-} from "lucide-react";
+import { Globe, Radio, ChevronRight, Sparkles } from "lucide-react";
 import { FaWhatsapp, FaInstagram, FaTiktok } from "react-icons/fa6";
 
 export interface LinkItem {
@@ -21,7 +14,6 @@ export interface LinkItem {
   url: string;
   badge?: string;
   highlight?: boolean;
-  tags?: string[];
   iconType: "website" | "whatsapp" | "channel" | "instagram" | "tiktok";
 }
 
@@ -54,13 +46,11 @@ export default function LinkCard({ link, index }: LinkCardProps) {
     const y = (rect.top + rect.height / 2) / window.innerHeight;
 
     confetti({
-      particleCount: link.highlight ? 45 : 28,
-      spread: 60,
+      particleCount: link.highlight ? 40 : 25,
+      spread: 55,
       origin: { x, y },
-      colors: link.highlight
-        ? ["#D4AF37", "#FAF5EC", "#171717", "#C5A059", "#FFFFFF"]
-        : ["#D4AF37", "#AF8E60", "#171717", "#FAF8F5"],
-      ticks: 160,
+      colors: ["#D4AF37", "#FAF5EC", "#171717", "#C5A059", "#FFFFFF"],
+      ticks: 150,
       gravity: 1.1,
       scalar: 0.85,
     });
@@ -69,63 +59,33 @@ export default function LinkCard({ link, index }: LinkCardProps) {
   const renderIcon = () => {
     switch (link.iconType) {
       case "website":
-        return <Globe className="w-4 h-4 text-surface-dark group-hover:rotate-12 transition-transform duration-300" />;
+        return <Globe className="w-5 h-5 text-surface-dark group-hover:rotate-12 transition-transform duration-300" />;
       case "whatsapp":
-        return <FaWhatsapp className="w-4 h-4 text-emerald-600" />;
+        return <FaWhatsapp className="w-5 h-5 text-emerald-600" />;
       case "channel":
-        return <Radio className="w-4 h-4 text-emerald-700 animate-pulse" />;
+        return <Radio className="w-5 h-5 text-emerald-700 animate-pulse" />;
       case "instagram":
-        return <FaInstagram className="w-4 h-4 text-pink-600" />;
+        return <FaInstagram className="w-5 h-5 text-pink-600" />;
       case "tiktok":
-        return <FaTiktok className="w-4 h-4 text-surface-dark" />;
+        return <FaTiktok className="w-5 h-5 text-surface-dark" />;
       default:
-        return <Sparkles className="w-4 h-4 text-gold-600" />;
+        return <Sparkles className="w-5 h-5 text-gold-600" />;
     }
   };
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 14 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        delay: 0.08 + index * 0.06,
-        duration: 0.4,
+        delay: 0.05 + index * 0.05,
+        duration: 0.35,
         type: "spring",
         stiffness: 280,
         damping: 22,
       }}
-      className="relative w-full pt-2 pb-0.5"
+      className="w-full"
     >
-      {/* Top Floating Badge with Category/Status */}
-      {link.badge && (
-        <div className="absolute top-0 left-4 z-20">
-          <motion.div
-            initial={{ scale: 0.85 }}
-            animate={{ scale: [1, 1.04, 1] }}
-            transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-            className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[9px] font-display font-extrabold tracking-widest uppercase border border-surface-dark shadow-[0_1.5px_0_#171717] ${
-              link.highlight
-                ? "bg-gradient-to-r from-gold-400 via-gold-300 to-gold-400 text-surface-dark"
-                : link.iconType === "whatsapp" || link.iconType === "channel"
-                ? "bg-emerald-400 text-surface-dark"
-                : link.iconType === "instagram"
-                ? "bg-rose-400 text-surface-dark"
-                : "bg-surface-dark text-white"
-            }`}
-          >
-            {link.highlight ? (
-              <Flame className="w-2.5 h-2.5 text-surface-dark fill-surface-dark animate-bounce" />
-            ) : link.iconType === "whatsapp" || link.iconType === "channel" ? (
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-800 animate-ping inline-block" />
-            ) : (
-              <Sparkles className="w-2.5 h-2.5 text-gold-300 fill-gold-300" />
-            )}
-            <span>{link.badge}</span>
-          </motion.div>
-        </div>
-      )}
-
-      {/* Main Link Button Pill */}
       <motion.a
         href={link.url}
         target="_blank"
@@ -136,33 +96,33 @@ export default function LinkCard({ link, index }: LinkCardProps) {
         onMouseLeave={() => setIsHovered(false)}
         whileHover={{ scale: 1.015 }}
         whileTap={{ scale: 0.985 }}
-        className={`group relative block w-full rounded-[20px] p-3 sm:p-3.5 border-[1.75px] border-surface-dark transition-all duration-200 overflow-hidden ${
+        className={`group relative flex items-center justify-between w-full rounded-[22px] p-4 sm:p-4.5 border-2 border-surface-dark transition-all duration-200 overflow-hidden ${
           link.highlight
-            ? "bg-gradient-to-r from-gold-50 via-white to-gold-50/80 shadow-[0_4px_0_#171717] hover:shadow-[0_6px_0_#171717] hover:border-gold-600 active:shadow-[0_1.5px_0_#171717] active:translate-y-0.5 ring-1 ring-gold-400/50"
-            : "bg-white/95 backdrop-blur-sm shadow-[0_3.5px_0_#171717] hover:shadow-[0_5px_0_#171717] active:shadow-[0_1.5px_0_#171717] active:translate-y-0.5 hover:bg-white"
+            ? "bg-gradient-to-r from-gold-100/90 via-white to-gold-50 shadow-[0_5px_0_#171717] hover:shadow-[0_7px_0_#171717] hover:border-gold-600 active:shadow-[0_2px_0_#171717] active:translate-y-0.5"
+            : "bg-white/95 backdrop-blur-sm shadow-[0_4px_0_#171717] hover:shadow-[0_6px_0_#171717] active:shadow-[0_2px_0_#171717] active:translate-y-0.5 hover:bg-white"
         }`}
       >
-        {/* Desktop Dynamic Spotlight Light tracking cursor */}
+        {/* Desktop Dynamic Spotlight Light */}
         {isHovered && (
           <div
             className="pointer-events-none absolute -inset-px transition-opacity duration-300 opacity-100 hidden sm:block"
             style={{
               background: `radial-gradient(240px circle at ${mousePosition.x}px ${mousePosition.y}px, ${
-                link.highlight ? "rgba(212, 175, 55, 0.2)" : "rgba(212, 175, 55, 0.1)"
+                link.highlight ? "rgba(212, 175, 55, 0.22)" : "rgba(212, 175, 55, 0.12)"
               }, transparent 80%)`,
             }}
           />
         )}
 
-        {/* Highlight Shimmer Wave for Primary CTA */}
+        {/* Shimmer for Highlight Card */}
         {link.highlight && (
           <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-gold-200/40 to-transparent pointer-events-none" />
         )}
 
-        <div className="relative flex items-center gap-3 z-10">
-          {/* Left Icon Box with styled border */}
+        <div className="relative flex items-center gap-3.5 z-10 min-w-0">
+          {/* Icon Container */}
           <div
-            className={`flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center border-[1.5px] border-surface-dark shadow-[0_2px_0_#171717] transition-transform duration-300 group-hover:rotate-6 ${
+            className={`flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center border-2 border-surface-dark shadow-[0_2px_0_#171717] transition-transform duration-300 group-hover:rotate-6 ${
               link.highlight
                 ? "bg-gold-200"
                 : link.iconType === "whatsapp" || link.iconType === "channel"
@@ -175,62 +135,47 @@ export default function LinkCard({ link, index }: LinkCardProps) {
             {renderIcon()}
           </div>
 
-          {/* Center Text Content */}
-          <div className="flex-1 min-w-0 text-left">
-            <div className="flex items-center gap-1.5">
+          {/* Title & Clean Subtitle */}
+          <div className="text-left min-w-0">
+            <div className="flex items-center gap-2">
               <h2
-                className={`font-display text-[13.5px] sm:text-[15px] font-bold tracking-tight text-surface-dark leading-snug group-hover:text-gold-700 transition-colors truncate ${
+                className={`font-display text-[15px] sm:text-base font-bold text-surface-dark leading-snug group-hover:text-gold-700 transition-colors truncate ${
                   link.highlight ? "font-extrabold text-gold-950" : ""
                 }`}
               >
                 {link.title}
               </h2>
-              {link.highlight && (
-                <Sparkles className="w-3.5 h-3.5 text-gold-500 fill-gold-400 shrink-0 hidden xs:inline-block animate-pulse" />
+              {link.badge && (
+                <span
+                  className={`inline-block px-2 py-0.5 rounded-full text-[9px] font-display font-extrabold uppercase tracking-wider border border-surface-dark/30 ${
+                    link.highlight
+                      ? "bg-gold-400 text-surface-dark"
+                      : link.iconType === "whatsapp" || link.iconType === "channel"
+                      ? "bg-emerald-200 text-emerald-900"
+                      : "bg-boutique-200 text-surface-dark"
+                  }`}
+                >
+                  {link.badge}
+                </span>
               )}
             </div>
 
-            <p className="font-body text-[11px] sm:text-[11.5px] text-neutral-600 truncate mt-0.5 font-medium tracking-wide">
+            <p className="font-body text-xs text-neutral-500 font-semibold truncate mt-0.5">
               {link.subtitle}
             </p>
-
-            {/* Micro Tags */}
-            {link.tags && link.tags.length > 0 && (
-              <div className="flex flex-wrap gap-1 mt-1.5">
-                {link.tags.map((tag, i) => (
-                  <span
-                    key={i}
-                    className={`inline-block px-2 py-0.2 rounded-full text-[9px] font-display font-bold uppercase tracking-wider border border-surface-dark/20 ${
-                      link.highlight
-                        ? "bg-gold-100 text-surface-dark"
-                        : "bg-boutique-100 text-neutral-800"
-                    }`}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
           </div>
+        </div>
 
-          {/* Right Action Button with Arrow / External Link */}
-          <div className="flex items-center gap-1.5 flex-shrink-0">
-            {link.highlight ? (
-              <div className="hidden xs:flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-dark text-gold-300 text-[9px] font-display font-extrabold uppercase tracking-wider border border-gold-400 shadow-xs">
-                <span>ABRIR</span>
-                <ExternalLink className="w-2.5 h-2.5 text-gold-400" />
-              </div>
-            ) : null}
-
-            <div
-              className={`w-7 h-7 rounded-full border border-surface-dark flex items-center justify-center shadow-[0_1.5px_0_#171717] transition-all group-hover:translate-x-0.5 ${
-                link.highlight
-                  ? "bg-gold-400 text-surface-dark group-hover:bg-surface-dark group-hover:text-gold-400"
-                  : "bg-boutique-100 text-surface-dark group-hover:bg-surface-dark group-hover:text-white"
-              }`}
-            >
-              <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:scale-110" />
-            </div>
+        {/* Right Arrow Action */}
+        <div className="flex items-center gap-2 flex-shrink-0 z-10 ml-2">
+          <div
+            className={`w-8 h-8 rounded-full border border-surface-dark flex items-center justify-center shadow-[0_2px_0_#171717] transition-all group-hover:translate-x-0.5 ${
+              link.highlight
+                ? "bg-gold-400 text-surface-dark group-hover:bg-surface-dark group-hover:text-gold-400"
+                : "bg-boutique-100 text-surface-dark group-hover:bg-surface-dark group-hover:text-white"
+            }`}
+          >
+            <ChevronRight className="w-4 h-4 transition-transform group-hover:scale-110" />
           </div>
         </div>
       </motion.a>
