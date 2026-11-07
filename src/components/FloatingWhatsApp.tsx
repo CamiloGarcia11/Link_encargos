@@ -17,7 +17,7 @@ export default function FloatingWhatsApp() {
       particleCount: 30,
       spread: 50,
       origin: { x, y },
-      colors: ["#25D366", "#FFFFFF", "#F59E0B", "#171717"],
+      colors: ["#25D366", "#FFFFFF", "#000000", "#737373"],
     });
   };
 

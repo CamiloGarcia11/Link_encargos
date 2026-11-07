@@ -1,6 +1,6 @@
 # Encargos Mi Ángel — Official Link-in-Bio & Brand Hub
 
-Aplicación web oficial tipo "Link-in-Bio / Linktree" de alto impacto visual para la marca **Encargos Mi Ángel**, con arquitectura **Desktop-First / Full Responsive**, micro-interacciones hápticas, efectos de brillo spotlight y diseño boutique champaña/oro.
+Aplicación web oficial tipo "Link-in-Bio / Linktree" de alto impacto visual para la marca **Encargos Mi Ángel**, con arquitectura **Desktop-First / Full Responsive**, micro-interacciones hápticas, efectos de brillo spotlight y diseño boutique monocromático en blanco y negro de alta costura.
 
 ---
 
@@ -16,7 +16,7 @@ Aplicación web oficial tipo "Link-in-Bio / Linktree" de alto impacto visual par
   * Modal interactivo para compartir y escanear QR.
 * **Branding de Lujo:**
   * Tipografías oficiales: `Quicksand` (display) y `Nunito` (body).
-  * Paleta de colores boutique: Amarillo Pastel (`#FEF9C3`), Oro Champaña (`#D4AF37`) y Obsidiana (`#171717`).
+  * Paleta de colores monocromática de lujo: Blanco puro y sutil gris perla (`#FFFFFF` / `#FAFAFA`), Negro profundo / Obsidiana (`#171717`) y detalles en plata y escala monocromática.
   * Logo oficial integrado en avatar, watermark animado y generador QR.
 
 ---

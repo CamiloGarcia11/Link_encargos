@@ -42,23 +42,23 @@ export default function DesktopShowcase() {
         className="w-full rounded-[26px] bg-white/90 backdrop-blur-md border-2 border-surface-dark p-5 sm:p-5 shadow-[0_6px_0_#171717] relative overflow-hidden"
       >
         {/* Ambient Top Glow in Card */}
-        <div className="absolute -top-20 -right-20 w-48 h-48 bg-gradient-to-br from-gold-300/30 to-boutique-200/20 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute -top-20 -right-20 w-48 h-48 bg-gradient-to-br from-neutral-200/50 to-neutral-100/30 rounded-full blur-2xl pointer-events-none" />
 
         <div className="flex items-center justify-between mb-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold-100 text-surface-dark border border-surface-dark/25 text-[10.5px] font-display font-extrabold uppercase tracking-wider">
-            <Sparkles className="w-3 h-3 text-gold-600 fill-gold-500" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-dark text-white border border-surface-dark text-[10.5px] font-display font-extrabold uppercase tracking-wider shadow-xs">
+            <Sparkles className="w-3 h-3 text-white fill-white" />
             <span>Experiencia Desktop Exclusiva</span>
           </div>
 
           {/* Sound FX Toggle Pill */}
           <button
             onClick={handleSoundToggle}
-            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-boutique-100 hover:bg-gold-100 text-surface-dark text-xs font-display font-bold border border-surface-dark transition-colors shadow-[0_2px_0_#171717]"
+            className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-100 hover:bg-neutral-200 text-surface-dark text-xs font-display font-bold border border-surface-dark transition-colors shadow-[0_2px_0_#171717]"
             title={soundOn ? "Silenciar efectos sonoros" : "Activar efectos sonoros"}
           >
             {soundOn ? (
               <>
-                <Volume2 className="w-3.5 h-3.5 text-gold-600" />
+                <Volume2 className="w-3.5 h-3.5 text-surface-dark" />
                 <span className="text-[10px] tracking-wider uppercase">Audio ON</span>
               </>
             ) : (
@@ -111,7 +111,7 @@ export default function DesktopShowcase() {
             ].map((cat, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-2 p-2 rounded-xl bg-boutique-50 border border-surface-dark/20 text-surface-dark text-xs font-display font-bold"
+                className="flex items-center gap-2 p-2 rounded-xl bg-neutral-100 border border-surface-dark/20 text-surface-dark text-xs font-display font-bold"
               >
                 <span className="text-sm">{cat.icon}</span>
                 <span className="truncate">{cat.name}</span>
@@ -123,7 +123,7 @@ export default function DesktopShowcase() {
         {/* Trust Value Badges Grid */}
         <div className="grid grid-cols-3 gap-2.5 pt-2">
           <div className="p-3 rounded-2xl bg-white border border-surface-dark/25 shadow-sm text-center">
-            <ShieldCheck className="w-5 h-5 text-gold-600 mx-auto mb-1" />
+            <ShieldCheck className="w-5 h-5 text-surface-dark mx-auto mb-1" />
             <p className="text-[11px] font-display font-extrabold text-surface-dark uppercase tracking-wider">
               100% Original
             </p>
@@ -131,7 +131,7 @@ export default function DesktopShowcase() {
           </div>
 
           <div className="p-3 rounded-2xl bg-white border border-surface-dark/25 shadow-sm text-center">
-            <Truck className="w-5 h-5 text-emerald-600 mx-auto mb-1" />
+            <Truck className="w-5 h-5 text-surface-dark mx-auto mb-1" />
             <p className="text-[11px] font-display font-extrabold text-surface-dark uppercase tracking-wider">
               Envíos Seguros
             </p>
@@ -139,7 +139,7 @@ export default function DesktopShowcase() {
           </div>
 
           <div className="p-3 rounded-2xl bg-white border border-surface-dark/25 shadow-sm text-center">
-            <Clock className="w-5 h-5 text-indigo-600 mx-auto mb-1" />
+            <Clock className="w-5 h-5 text-surface-dark mx-auto mb-1" />
             <p className="text-[11px] font-display font-extrabold text-surface-dark uppercase tracking-wider">
               Respuesta Rápida
             </p>
@@ -153,7 +153,7 @@ export default function DesktopShowcase() {
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
-        className="w-full rounded-[28px] bg-gradient-to-br from-gold-100/80 via-white to-boutique-100/90 border-2 border-surface-dark p-5 shadow-[0_6px_0_#171717] flex items-center gap-4"
+        className="w-full rounded-[28px] bg-gradient-to-br from-neutral-50 via-white to-neutral-100 border-2 border-surface-dark p-5 shadow-[0_6px_0_#171717] flex items-center gap-4"
       >
         <div className="relative w-24 h-24 bg-white p-2 rounded-2xl border-2 border-surface-dark flex items-center justify-center shrink-0 shadow-inner">
           {/* Visual SVG QR representation */}
@@ -190,7 +190,7 @@ export default function DesktopShowcase() {
         </div>
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-1.5 mb-1 text-gold-700 font-display text-[10.5px] font-extrabold uppercase tracking-wider">
+          <div className="flex items-center gap-1.5 mb-1 text-surface-dark font-display text-[10.5px] font-extrabold uppercase tracking-wider">
             <QrCode className="w-3.5 h-3.5" />
             <span>Escanear con tu Celular</span>
           </div>

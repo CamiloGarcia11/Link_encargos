@@ -19,10 +19,10 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleLinkClick}
-          className="p-2.5 rounded-full bg-white border border-surface-dark text-surface-dark shadow-[0_2px_0_#171717] hover:bg-gold-100 transition-transform hover:scale-110"
+          className="p-2.5 rounded-full bg-white border border-surface-dark text-surface-dark shadow-[0_2px_0_#171717] hover:bg-surface-dark hover:text-white transition-all hover:scale-110"
           aria-label="WhatsApp Directo"
         >
-          <FaWhatsapp className="w-4 h-4 text-emerald-600" />
+          <FaWhatsapp className="w-4 h-4" />
         </a>
 
         <a
@@ -30,10 +30,10 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleLinkClick}
-          className="p-2.5 rounded-full bg-white border border-surface-dark text-surface-dark shadow-[0_2px_0_#171717] hover:bg-gold-100 transition-transform hover:scale-110"
+          className="p-2.5 rounded-full bg-white border border-surface-dark text-surface-dark shadow-[0_2px_0_#171717] hover:bg-surface-dark hover:text-white transition-all hover:scale-110"
           aria-label="Instagram Oficial"
         >
-          <FaInstagram className="w-4 h-4 text-pink-600" />
+          <FaInstagram className="w-4 h-4" />
         </a>
 
         <a
@@ -41,10 +41,10 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleLinkClick}
-          className="p-2.5 rounded-full bg-white border border-surface-dark text-surface-dark shadow-[0_2px_0_#171717] hover:bg-gold-100 transition-transform hover:scale-110"
+          className="p-2.5 rounded-full bg-white border border-surface-dark text-surface-dark shadow-[0_2px_0_#171717] hover:bg-surface-dark hover:text-white transition-all hover:scale-110"
           aria-label="TikTok Oficial"
         >
-          <FaTiktok className="w-4 h-4 text-surface-dark" />
+          <FaTiktok className="w-4 h-4" />
         </a>
 
         <a
@@ -52,17 +52,17 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleLinkClick}
-          className="p-2.5 rounded-full bg-white border border-surface-dark text-surface-dark shadow-[0_2px_0_#171717] hover:bg-gold-100 transition-transform hover:scale-110"
+          className="p-2.5 rounded-full bg-white border border-surface-dark text-surface-dark shadow-[0_2px_0_#171717] hover:bg-surface-dark hover:text-white transition-all hover:scale-110"
           aria-label="Canal de Promociones y Descuentos WhatsApp"
         >
-          <Sparkles className="w-4 h-4 text-gold-600" />
+          <Sparkles className="w-4 h-4" />
         </a>
       </div>
 
       {/* Brand Rights */}
       <div className="flex items-center justify-center gap-1.5 text-xs font-display uppercase font-bold tracking-widest text-neutral-700 mb-1">
         <span>Boutique de Confianza</span>
-        <Heart className="w-3.5 h-3.5 text-gold-600 fill-gold-500 inline-block" />
+        <Heart className="w-3.5 h-3.5 text-surface-dark fill-surface-dark inline-block" />
         <span>Encargos Mi Ángel</span>
       </div>
 
@@ -77,11 +77,11 @@ export default function Footer() {
         </span>
 
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border-[1.5px] border-surface-dark shadow-[0_3px_0_#171717] hover:shadow-[0_4px_0_#171717] hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-[0_1px_0_#171717] transition-all cursor-default">
-          <div className="w-2 h-2 rounded-full bg-gold-500 animate-pulse" />
+          <div className="w-2 h-2 rounded-full bg-surface-dark animate-pulse" />
           <span className="font-serif font-black text-xs tracking-wider text-surface-dark">
             VisionWeb
           </span>
-          <span className="text-[8px] font-display font-extrabold uppercase px-1.5 py-0.5 rounded bg-gold-200 border border-surface-dark/30 text-surface-dark tracking-wider">
+          <span className="text-[8px] font-display font-extrabold uppercase px-1.5 py-0.5 rounded bg-neutral-100 border border-surface-dark/30 text-surface-dark tracking-wider">
             STUDIO
           </span>
         </div>

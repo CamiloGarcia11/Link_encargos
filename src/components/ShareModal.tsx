@@ -71,15 +71,15 @@ export default function ShareModal({ isOpen, onClose }: ShareModalProps) {
             <button
               onClick={onClose}
               aria-label="Cerrar ventana"
-              className="absolute top-4 right-4 p-2 rounded-full border border-surface-dark/20 hover:bg-boutique-100 transition-colors"
+              className="absolute top-4 right-4 p-2 rounded-full border border-surface-dark/20 hover:bg-neutral-100 transition-colors"
             >
               <X className="w-5 h-5 text-surface-dark" />
             </button>
 
             {/* Header */}
             <div className="text-center mt-1 mb-5">
-              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold-100 border-2 border-surface-dark mb-3 shadow-[0_3px_0_#171717]">
-                <QrCode className="w-7 h-7 text-gold-700" />
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-neutral-100 border-2 border-surface-dark mb-3 shadow-[0_3px_0_#171717]">
+                <QrCode className="w-7 h-7 text-surface-dark" />
               </div>
               <h3 className="font-display text-2xl font-extrabold tracking-tight">
                 Compartir Perfil
@@ -90,7 +90,7 @@ export default function ShareModal({ isOpen, onClose }: ShareModalProps) {
             </div>
 
             {/* QR Code Graphic Box */}
-            <div className="flex flex-col items-center justify-center p-4 rounded-2xl bg-boutique-50 border border-surface-dark/20 mb-5">
+            <div className="flex flex-col items-center justify-center p-4 rounded-2xl bg-neutral-50 border border-surface-dark/20 mb-5">
               <div className="relative w-44 h-44 bg-white p-3 rounded-xl border-2 border-surface-dark flex items-center justify-center shadow-inner">
                 {/* Visual SVG QR representation */}
                 <svg
@@ -152,7 +152,7 @@ export default function ShareModal({ isOpen, onClose }: ShareModalProps) {
                   </>
                 ) : (
                   <>
-                    <Copy className="w-4 h-4 text-gold-400" />
+                    <Copy className="w-4 h-4 text-white" />
                     <span>Copiar Enlace Directo</span>
                   </>
                 )}
@@ -160,7 +160,7 @@ export default function ShareModal({ isOpen, onClose }: ShareModalProps) {
 
               <button
                 onClick={handleNativeShare}
-                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gold-200 border-2 border-surface-dark text-surface-dark font-display text-xs uppercase font-bold tracking-wider hover:bg-gold-300 transition-colors shadow-[0_3px_0_#171717] active:translate-y-0.5 active:shadow-none"
+                className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-neutral-100 border-2 border-surface-dark text-surface-dark font-display text-xs uppercase font-bold tracking-wider hover:bg-neutral-200 transition-colors shadow-[0_3px_0_#171717] active:translate-y-0.5 active:shadow-none"
               >
                 <Share2 className="w-4 h-4" />
                 <span>Compartir en Redes</span>

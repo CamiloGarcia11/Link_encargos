@@ -25,16 +25,16 @@ export default function HeaderProfile({ onOpenShare }: HeaderProfileProps) {
           whileTap={{ scale: 0.95 }}
           onClick={handleShareClick}
           aria-label="Compartir perfil oficial"
-          className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border-[1.5px] border-surface-dark text-surface-dark text-xs font-display font-bold uppercase tracking-wider shadow-[0_2px_0_#171717] hover:shadow-[0_3px_0_#171717] transition-all hover:bg-gold-50"
+          className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md border-[1.5px] border-surface-dark text-surface-dark text-xs font-display font-bold uppercase tracking-wider shadow-[0_2px_0_#171717] hover:shadow-[0_3px_0_#171717] transition-all hover:bg-neutral-100"
         >
-          <Share2 className="w-3.5 h-3.5 text-gold-600" />
+          <Share2 className="w-3.5 h-3.5 text-surface-dark" />
           <span>Compartir</span>
         </motion.button>
       </div>
 
       {/* Profile Avatar */}
       <div className="relative mb-2.5">
-        <div className="absolute -inset-2.5 rounded-full bg-gradient-to-r from-gold-300/40 via-boutique-200/50 to-gold-400/40 opacity-75 blur-md animate-pulse-subtle" />
+        <div className="absolute -inset-2.5 rounded-full bg-gradient-to-r from-neutral-300/40 via-neutral-100/50 to-neutral-400/40 opacity-75 blur-md animate-pulse-subtle" />
 
         <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
@@ -60,12 +60,12 @@ export default function HeaderProfile({ onOpenShare }: HeaderProfileProps) {
           className="absolute bottom-0 right-0 bg-surface-dark text-white p-1 rounded-full border-2 border-white shadow-xs flex items-center justify-center"
           title="Marca Verificada"
         >
-          <CheckCircle className="w-3.5 h-3.5 text-emerald-400 fill-emerald-400" />
+          <CheckCircle className="w-3.5 h-3.5 text-white fill-surface-dark" />
         </div>
 
         {/* Floating Sparkle Badge */}
-        <div className="absolute -top-1 -left-1 bg-white text-gold-500 p-1 rounded-full border border-surface-dark shadow-[0_1.5px_0_#171717] text-xs flex items-center justify-center">
-          ✨
+        <div className="absolute -top-1 -left-1 bg-surface-dark text-white p-1 rounded-full border border-surface-dark shadow-[0_1.5px_0_#171717] text-xs flex items-center justify-center">
+          ✦
         </div>
       </div>
 

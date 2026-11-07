@@ -31,19 +31,19 @@ export default function BackgroundWatermark() {
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden select-none z-0">
-      {/* Base warm boutique radial ambient glow orbs */}
-      <div className="absolute -top-36 -left-36 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-yellow-300/25 via-boutique-100/30 to-transparent opacity-70 blur-3xl" />
-      <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-yellow-200/30 via-boutique-100/20 to-transparent opacity-60 blur-3xl" />
-      <div className="absolute -bottom-40 left-1/3 w-[550px] h-[550px] rounded-full bg-gradient-to-t from-boutique-100/30 via-yellow-200/20 to-transparent opacity-60 blur-3xl" />
+      {/* Base subtle monochrome radial ambient glow orbs */}
+      <div className="absolute -top-36 -left-36 w-[520px] h-[520px] rounded-full bg-gradient-to-br from-neutral-200/40 via-neutral-100/30 to-transparent opacity-70 blur-3xl" />
+      <div className="absolute top-1/4 -right-32 w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-neutral-300/30 via-neutral-100/20 to-transparent opacity-60 blur-3xl" />
+      <div className="absolute -bottom-40 left-1/3 w-[550px] h-[550px] rounded-full bg-gradient-to-t from-neutral-200/30 via-neutral-100/20 to-transparent opacity-60 blur-3xl" />
 
       {/* Rotating Subtle Celestial Rings for Luxury Aesthetics */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-[420px] h-[420px] sm:w-[620px] sm:h-[620px] lg:w-[840px] lg:h-[840px] rounded-full border border-dashed border-gold-400/20 animate-spin-very-slow" />
-        <div className="w-[340px] h-[340px] sm:w-[500px] sm:h-[500px] lg:w-[680px] lg:h-[680px] rounded-full border border-gold-300/15 animate-spin-very-slow [animation-direction:reverse]" />
+        <div className="w-[420px] h-[420px] sm:w-[620px] sm:h-[620px] lg:w-[840px] lg:h-[840px] rounded-full border border-dashed border-neutral-900/10 animate-spin-very-slow" />
+        <div className="w-[340px] h-[340px] sm:w-[500px] sm:h-[500px] lg:w-[680px] lg:h-[680px] rounded-full border border-neutral-700/10 animate-spin-very-slow [animation-direction:reverse]" />
       </div>
 
       {/* Corner Luxury Flourish Icons (Wing / Angel Feather hints) */}
-      <div className="absolute top-4 right-4 md:top-8 md:right-8 opacity-25 text-gold-600 transform rotate-12">
+      <div className="absolute top-4 right-4 md:top-8 md:right-8 opacity-20 text-neutral-800 transform rotate-12">
         <svg
           width="110"
           height="110"
@@ -57,16 +57,16 @@ export default function BackgroundWatermark() {
           />
           <path
             d="M30 85C45 75 60 55 90 25C75 50 55 70 30 85Z"
-            fill="#F59E0B"
+            fill="#525252"
           />
           <path
             d="M10 75C25 65 40 45 70 15C55 40 35 60 10 75Z"
-            fill="#D97706"
+            fill="#171717"
           />
         </svg>
       </div>
 
-      <div className="absolute bottom-6 left-4 md:bottom-10 md:left-8 opacity-20 text-gold-600 transform -rotate-45">
+      <div className="absolute bottom-6 left-4 md:bottom-10 md:left-8 opacity-15 text-neutral-800 transform -rotate-45">
         <svg
           width="110"
           height="110"
@@ -80,7 +80,7 @@ export default function BackgroundWatermark() {
           />
           <path
             d="M30 85C45 75 60 55 90 25C75 50 55 70 30 85Z"
-            fill="#F59E0B"
+            fill="#525252"
           />
         </svg>
       </div>
@@ -112,7 +112,7 @@ export default function BackgroundWatermark() {
         </motion.div>
       </div>
 
-      {/* Floating Sparkle Particles (Golden & Ambient White) */}
+      {/* Floating Sparkle Particles (Monochrome & Ambient White) */}
       {particles.map((p) => (
         <motion.div
           key={p.id}
@@ -124,12 +124,14 @@ export default function BackgroundWatermark() {
             height: `${p.size}px`,
             backgroundColor:
               p.id % 3 === 0
-                ? "rgba(245, 158, 11, 0.6)"
+                ? "rgba(23, 23, 23, 0.45)"
                 : p.id % 3 === 1
-                ? "rgba(255, 255, 255, 0.85)"
-                : "rgba(251, 191, 36, 0.45)",
+                ? "rgba(255, 255, 255, 0.95)"
+                : "rgba(115, 115, 115, 0.35)",
             boxShadow:
-              p.id % 2 === 0 ? "0 0 10px rgba(245, 158, 11, 0.7)" : "none",
+              p.id % 2 === 0
+                ? "0 0 8px rgba(23, 23, 23, 0.25)"
+                : "0 0 8px rgba(255, 255, 255, 0.6)",
           }}
           animate={{
             y: [0, -32, 0],

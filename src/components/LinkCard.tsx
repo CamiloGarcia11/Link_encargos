@@ -49,7 +49,7 @@ export default function LinkCard({ link, index }: LinkCardProps) {
       particleCount: link.highlight ? 40 : 25,
       spread: 55,
       origin: { x, y },
-      colors: ["#FECDD3", "#FDA4AF", "#FEF9C3", "#171717", "#FFFFFF"],
+      colors: ["#000000", "#FFFFFF", "#737373", "#D4D4D4", "#171717"],
       ticks: 150,
       gravity: 1.1,
       scalar: 0.85,
@@ -59,17 +59,23 @@ export default function LinkCard({ link, index }: LinkCardProps) {
   const renderIcon = () => {
     switch (link.iconType) {
       case "website":
-        return <Globe className="w-5 h-5 text-surface-dark group-hover:rotate-12 transition-transform duration-300" />;
+        return (
+          <Globe
+            className={`w-5 h-5 group-hover:rotate-12 transition-transform duration-300 ${
+              link.highlight ? "text-white" : "text-surface-dark"
+            }`}
+          />
+        );
       case "whatsapp":
-        return <FaWhatsapp className="w-5 h-5 text-emerald-600" />;
+        return <FaWhatsapp className="w-5 h-5 text-surface-dark" />;
       case "channel":
-        return <Radio className="w-5 h-5 text-emerald-700 animate-pulse" />;
+        return <Radio className="w-5 h-5 text-surface-dark animate-pulse" />;
       case "instagram":
-        return <FaInstagram className="w-5 h-5 text-pink-600" />;
+        return <FaInstagram className="w-5 h-5 text-surface-dark" />;
       case "tiktok":
         return <FaTiktok className="w-5 h-5 text-surface-dark" />;
       default:
-        return <Sparkles className="w-5 h-5 text-amber-500" />;
+        return <Sparkles className="w-5 h-5 text-surface-dark" />;
     }
   };
 
@@ -108,7 +114,7 @@ export default function LinkCard({ link, index }: LinkCardProps) {
             className="pointer-events-none absolute -inset-px transition-opacity duration-300 opacity-100 hidden sm:block"
             style={{
               background: `radial-gradient(240px circle at ${mousePosition.x}px ${mousePosition.y}px, ${
-                link.highlight ? "rgba(254, 205, 211, 0.35)" : "rgba(251, 191, 36, 0.10)"
+                link.highlight ? "rgba(23, 23, 23, 0.08)" : "rgba(23, 23, 23, 0.04)"
               }, transparent 80%)`,
             }}
           />
@@ -116,7 +122,7 @@ export default function LinkCard({ link, index }: LinkCardProps) {
 
         {/* Shimmer for Highlight Card */}
         {link.highlight && (
-          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-rose-200/35 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-neutral-200/50 to-transparent pointer-events-none" />
         )}
 
         <div className="relative flex items-center gap-3.5 z-10 min-w-0">
@@ -124,12 +130,8 @@ export default function LinkCard({ link, index }: LinkCardProps) {
           <div
             className={`flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center border-2 border-surface-dark shadow-[0_2px_0_#171717] transition-transform duration-300 group-hover:rotate-6 ${
               link.highlight
-                ? "bg-rose-100"
-                : link.iconType === "whatsapp" || link.iconType === "channel"
-                ? "bg-emerald-100"
-                : link.iconType === "instagram"
-                ? "bg-rose-100"
-                : "bg-boutique-100"
+                ? "bg-surface-dark text-white"
+                : "bg-neutral-100 text-surface-dark"
             }`}
           >
             {renderIcon()}
@@ -149,10 +151,8 @@ export default function LinkCard({ link, index }: LinkCardProps) {
                 <span
                   className={`inline-block px-2.5 py-0.5 rounded-full text-[9px] font-display font-extrabold uppercase tracking-wider border shadow-xs ${
                     link.highlight
-                      ? "bg-rose-100 text-surface-dark border-surface-dark"
-                      : link.iconType === "whatsapp" || link.iconType === "channel"
-                      ? "bg-emerald-100 text-emerald-900 border-emerald-300"
-                      : "bg-boutique-100 text-surface-dark border-surface-dark/25"
+                      ? "bg-surface-dark text-white border-surface-dark"
+                      : "bg-neutral-100 text-surface-dark border-surface-dark/30"
                   }`}
                 >
                   {link.badge}
@@ -171,8 +171,8 @@ export default function LinkCard({ link, index }: LinkCardProps) {
           <div
             className={`w-8 h-8 rounded-full border border-surface-dark flex items-center justify-center shadow-[0_2px_0_#171717] transition-all group-hover:translate-x-0.5 ${
               link.highlight
-                ? "bg-rose-100 text-surface-dark group-hover:bg-rose-200"
-                : "bg-boutique-100 text-surface-dark group-hover:bg-surface-dark group-hover:text-white"
+                ? "bg-surface-dark text-white group-hover:bg-neutral-800"
+                : "bg-neutral-100 text-surface-dark group-hover:bg-surface-dark group-hover:text-white"
             }`}
           >
             <ChevronRight className="w-4 h-4 transition-transform group-hover:scale-110" />

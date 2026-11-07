@@ -60,7 +60,7 @@ export default function Home() {
   const [shareOpen, setShareOpen] = useState(false);
 
   return (
-    <main className="relative min-h-screen min-h-[100dvh] bg-boutique-50 overflow-x-hidden flex flex-col justify-between selection:bg-gold-200 selection:text-surface-dark">
+    <main className="relative min-h-screen min-h-[100dvh] bg-[#FAFAFA] overflow-x-hidden flex flex-col justify-between selection:bg-surface-dark selection:text-white">
       {/* Background with watermark logo, orbital rings and ambient glowing lights */}
       <BackgroundWatermark />
 

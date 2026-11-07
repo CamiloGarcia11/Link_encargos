@@ -20,9 +20,9 @@ export default function TickerBar() {
             key={idx}
             className="mx-5 text-[11px] font-display font-bold tracking-[0.22em] uppercase flex items-center gap-2.5"
           >
-            <span className="text-gold-400">✦</span>
-            <span className="text-neutral-100">{item}</span>
-            <span className="text-gold-400">✦</span>
+            <span className="text-neutral-400">✦</span>
+            <span className="text-white font-extrabold">{item}</span>
+            <span className="text-neutral-400">✦</span>
           </span>
         ))}
       </div>
